@@ -1,5 +1,5 @@
 # Nanoid20K
-Arkanoid for Tang Nano 20K
+Arkanoid for Tang Nano 20K - System Verilog
 Its little mess now, Work in progress...
 Just basic concept.
 todo:
