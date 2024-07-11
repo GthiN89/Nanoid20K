@@ -1,0 +1,60 @@
+[
+ {
+  "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+  "InstLine" : 4,
+  "InstName" : "HDMI_top",
+  "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+  "ModuleLine" : 4,
+  "ModuleName" : "HDMI_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+    "InstLine" : 26,
+    "InstName" : "s480p",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/simple480p.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "simple480p"
+   },
+   {
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+    "InstLine" : 59,
+    "InstName" : "animation",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/pattern.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "pattern"
+   },
+   {
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+    "InstLine" : 74,
+    "InstName" : "encode_R",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "TMDS_encoder"
+   },
+   {
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+    "InstLine" : 75,
+    "InstName" : "encode_G",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "TMDS_encoder"
+   },
+   {
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+    "InstLine" : 76,
+    "InstName" : "encode_B",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "TMDS_encoder"
+   },
+   {
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+    "InstLine" : 82,
+    "InstName" : "rPLL",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/gowin_rpll/gowin_rpll.v",
+    "ModuleLine" : 10,
+    "ModuleName" : "Gowin_rPLL"
+   }
+  ]
+ }
+]

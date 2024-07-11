@@ -1,0 +1,33 @@
+{
+ "Device" : "GW2AR-18C",
+ "Files" : [
+  {
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/pattern.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/simple480p.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
+   "Type" : "verilog"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/impl/temp/rtl_parser.result",
+ "Top" : "HDMI",
+ "VerilogStd" : "sysv",
+ "VhdlStd" : "vhdl_93"
+}
