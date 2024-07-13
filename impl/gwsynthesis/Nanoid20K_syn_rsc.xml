@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module name="game_top">
-    <SubModule name="gw_gao_inst_0" Register="193" Lut="195" Bsram="13"/>
-    <SubModule name="s480p" Register="56" Alu="30" Lut="28"/>
-    <SubModule name="arkanoid" Register="56" Alu="40" Lut="310"/>
+    <SubModule name="gw_gao_inst_0" Register="193" Lut="191" Bsram="13"/>
+    <SubModule name="s480p" Register="56" Alu="30" Lut="29"/>
+    <SubModule name="arkanoid" Register="126" Alu="38" Lut="629"/>
     <SubModule name="DVI_TX_Top_inst" Register="52" Alu="69" Lut="220"/>
     <SubModule name="rPLL"/>
 </Module>

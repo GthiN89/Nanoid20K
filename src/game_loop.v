@@ -11,6 +11,10 @@ localparam V_RES = 480;  // vertical screen resolution
 
 localparam FRAME_NUM = 1;  // slow-mo: animate every N frames
 reg [$clog2(FRAME_NUM):0] cnt_frame;  // frame counter
+reg [7:0] score_counter; // score counter, 
+
+reg [3:0] tens_digit;
+reg [3:0] units_digit;
 
 always @(posedge clk) begin
     if (frame) cnt_frame <= (cnt_frame == FRAME_NUM-1) ? 0 : cnt_frame + 1;
@@ -47,6 +51,9 @@ initial begin
     qy = V_RES - V_SIZE_PADDLE - 50;   // 50 pixels above bottom edge
     qxb = (H_RES - H_SIZE_BALL) / 2;  // center ball horizontally
     qyb = V_RES - V_SIZE_BALL - 65;   // 65 pixels above bottom edge
+    score_counter = 0;
+    tens_digit = 4'b0000;
+    units_digit = 4'b0000;
 
     // Initialize bricks
     for (i = 0; i < NUM_BRICKS; i = i + 1) begin
@@ -122,6 +129,7 @@ always @(posedge clk) begin
 
                 if ((qxb + H_SIZE_BALL > bx_min) && (qxb < bx_max) &&
                     (qyb + V_SIZE_BALL > by_min) && (qyb < by_max)) begin
+                    score_counter = score_counter + 1;  // increase score on collision
                     bricks_active[i] = 0;
                     qdy <= ~qdy;
                 end
@@ -158,6 +166,254 @@ always @(posedge clk) begin
     end
 end
 
+// Score display in top left corner
+reg [7:0] score [7:0]; // 8x8 bitmaps for digits '0' to '9'
+always @ (posedge clk) begin
+    case (score_counter  % 10 - 1)
+        4'b0000: begin
+            score[0] = 8'b00111100;
+            score[1] = 8'b01100110;
+            score[2] = 8'b01100110;
+            score[3] = 8'b01100110;
+            score[4] = 8'b01100110;
+            score[5] = 8'b01100110;
+            score[6] = 8'b00111100;
+            score[7] = 8'b00000000;
+        end
+        4'b0001: begin
+            score[0] = 8'b00011000;
+            score[1] = 8'b00111000;
+            score[2] = 8'b00011000;
+            score[3] = 8'b00011000;
+            score[4] = 8'b00011000;
+            score[5] = 8'b00011000;
+            score[6] = 8'b01111110;
+            score[7] = 8'b00000000;
+        end
+        4'b0010: begin
+            score[0] = 8'b00111100;
+            score[1] = 8'b01100110;
+            score[2] = 8'b00000110;
+            score[3] = 8'b00001100;
+            score[4] = 8'b00110000;
+            score[5] = 8'b01100000;
+            score[6] = 8'b01111110;
+            score[7] = 8'b00000000;
+        end
+        4'b0011: begin
+            score[0] = 8'b00111100;
+            score[1] = 8'b01100110;
+            score[2] = 8'b00000110;
+            score[3] = 8'b00011100;
+            score[4] = 8'b00000110;
+            score[5] = 8'b01100110;
+            score[6] = 8'b00111100;
+            score[7] = 8'b00000000;
+        end
+        4'b0100: begin
+            score[0] = 8'b00001100;
+            score[1] = 8'b00011100;
+            score[2] = 8'b00111100;
+            score[3] = 8'b01101100;
+            score[4] = 8'b01111110;
+            score[5] = 8'b00001100;
+            score[6] = 8'b00011110;
+            score[7] = 8'b00000000;
+        end
+        4'b0101: begin
+            score[0] = 8'b01111110;
+            score[1] = 8'b01100000;
+            score[2] = 8'b01111100;
+            score[3] = 8'b00000110;
+            score[4] = 8'b00000110;
+            score[5] = 8'b01100110;
+            score[6] = 8'b00111100;
+            score[7] = 8'b00000000;
+        end
+        4'b0110: begin
+            score[0] = 8'b00111100;
+            score[1] = 8'b01100110;
+            score[2] = 8'b01100000;
+            score[3] = 8'b01111100;
+            score[4] = 8'b01100110;
+            score[5] = 8'b01100110;
+            score[6] = 8'b00111100;
+            score[7] = 8'b00000000;
+        end
+        4'b0111: begin
+            score[0] = 8'b01111110;
+            score[1] = 8'b01100110;
+            score[2] = 8'b00000110;
+            score[3] = 8'b00001100;
+            score[4] = 8'b00011000;
+            score[5] = 8'b00011000;
+            score[6] = 8'b00011000;
+            score[7] = 8'b00000000;
+        end
+        4'b1000: begin
+            score[0] = 8'b00111100;
+            score[1] = 8'b01100110;
+            score[2] = 8'b01100110;
+            score[3] = 8'b00111100;
+            score[4] = 8'b01100110;
+            score[5] = 8'b01100110;
+            score[6] = 8'b00111100;
+            score[7] = 8'b00000000;
+        end
+        4'b1001: begin
+            score[0] = 8'b00111100;
+            score[1] = 8'b01100110;
+            score[2] = 8'b01100110;
+            score[3] = 8'b00111110;
+            score[4] = 8'b00000110;
+            score[5] = 8'b01100110;
+            score[6] = 8'b00111100;
+            score[7] = 8'b00000000;
+        end
+        default: begin
+            score[0] = 8'b00000000;
+            score[1] = 8'b00000000;
+            score[2] = 8'b00000000;
+            score[3] = 8'b00000000;
+            score[4] = 8'b00000000;
+            score[5] = 8'b00000000;
+            score[6] = 8'b00000000;
+            score[7] = 8'b00000000;
+        end
+    endcase
+end
+
+reg [7:0] score_1 [7:0]; // 8x8 bitmaps for digits '0' to '9'
+always @ (posedge clk) begin
+    case (score_counter  / 10)
+        4'b0000: begin
+            score_1[0] = 8'b00111100;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b01100110;
+            score_1[3] = 8'b01100110;
+            score_1[4] = 8'b01100110;
+            score_1[5] = 8'b01100110;
+            score_1[6] = 8'b00111100;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0001: begin
+            score_1[0] = 8'b00011000;
+            score_1[1] = 8'b00111000;
+            score_1[2] = 8'b00011000;
+            score_1[3] = 8'b00011000;
+            score_1[4] = 8'b00011000;
+            score_1[5] = 8'b00011000;
+            score_1[6] = 8'b01111110;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0010: begin
+            score_1[0] = 8'b00111100;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b00000110;
+            score_1[3] = 8'b00001100;
+            score_1[4] = 8'b00110000;
+            score_1[5] = 8'b01100000;
+            score_1[6] = 8'b01111110;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0011: begin
+            score_1[0] = 8'b00111100;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b00000110;
+            score_1[3] = 8'b00011100;
+            score_1[4] = 8'b00000110;
+            score_1[5] = 8'b01100110;
+            score_1[6] = 8'b00111100;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0100: begin
+            score_1[0] = 8'b00001100;
+            score_1[1] = 8'b00011100;
+            score_1[2] = 8'b00111100;
+            score_1[3] = 8'b01101100;
+            score_1[4] = 8'b01111110;
+            score_1[5] = 8'b00001100;
+            score_1[6] = 8'b00011110;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0101: begin
+            score_1[0] = 8'b01111110;
+            score_1[1] = 8'b01100000;
+            score_1[2] = 8'b01111100;
+            score_1[3] = 8'b00000110;
+            score_1[4] = 8'b00000110;
+            score_1[5] = 8'b01100110;
+            score_1[6] = 8'b00111100;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0110: begin
+            score_1[0] = 8'b00111100;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b01100000;
+            score_1[3] = 8'b01111100;
+            score_1[4] = 8'b01100110;
+            score_1[5] = 8'b01100110;
+            score_1[6] = 8'b00111100;
+            score_1[7] = 8'b00000000;
+        end
+        4'b0111: begin
+            score_1[0] = 8'b01111110;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b00000110;
+            score_1[3] = 8'b00001100;
+            score_1[4] = 8'b00011000;
+            score_1[5] = 8'b00011000;
+            score_1[6] = 8'b00011000;
+            score_1[7] = 8'b00000000;
+        end
+        4'b1000: begin
+            score_1[0] = 8'b00111100;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b01100110;
+            score_1[3] = 8'b00111100;
+            score_1[4] = 8'b01100110;
+            score_1[5] = 8'b01100110;
+            score_1[6] = 8'b00111100;
+            score_1[7] = 8'b00000000;
+        end
+        4'b1001: begin
+            score_1[0] = 8'b00111100;
+            score_1[1] = 8'b01100110;
+            score_1[2] = 8'b01100110;
+            score_1[3] = 8'b00111110;
+            score_1[4] = 8'b00000110;
+            score_1[5] = 8'b01100110;
+            score_1[6] = 8'b00111100;
+            score_1[7] = 8'b00000000;
+        end
+        default: begin
+            score_1[0] = 8'b00000000;
+            score_1[1] = 8'b00000000;
+            score_1[2] = 8'b00000000;
+            score_1[3] = 8'b00000000;
+            score_1[4] = 8'b00000000;
+            score_1[5] = 8'b00000000;
+            score_1[6] = 8'b00000000;
+            score_1[7] = 8'b00000000;
+        end
+    endcase
+end
+
+
+reg score_area_1;
+always @(posedge clk) begin
+    integer scaled_sx = sx / 2;
+    integer scaled_sy = sy / 2;
+    score_area_1 = (sx < 16) && (sy < 16) && score_1[scaled_sy][7 - scaled_sx];
+end
+
+reg score_area_2;
+always @(posedge clk) begin
+    integer scaled_sx = (sx - 16) / 2;
+    integer scaled_sy = sy / 2;
+    score_area_2 = (sx >= 16) && (sx < 32) && (sy < 16) && score[scaled_sy][7 - scaled_sx];
+end
+
 always @(posedge clk) begin
     if (square) begin
         red <= 8'd0;
@@ -171,6 +427,14 @@ always @(posedge clk) begin
         red <= 8'd0;
         green <= 8'd255;
         blue <= 8'd0;
+    end else if (score_area_1) begin
+        red <= 8'd255;
+        green <= 8'd255;
+        blue <= 8'd255;
+    end else if (score_area_2) begin
+        red <= 8'd255;
+        green <= 8'd255;
+        blue <= 8'd255;
     end else begin
         red <= 8'd0;
         green <= 8'd0;
