@@ -6,7 +6,7 @@ Added levels.</br>
 Added state mashine.</br></br>
 
 <ul>
-  TODO:
+TODO:
 <li>DualShock 2 support</li>
 </ul>
 </br>
