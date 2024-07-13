@@ -5,6 +5,7 @@
     <Version>5</Version>
     <Device name="GW2AR-18C" pn="GW2AR-LV18QN88PFC9/I8">gw2ar18c-016</Device>
     <FileList>
+        <File path="src/char_bitmap.v" type="file.verilog" enable="1"/>
         <File path="src/display480p.v" type="file.verilog" enable="1"/>
         <File path="src/dvi_tx/dvi_tx.v" type="file.verilog" enable="1"/>
         <File path="src/game_loop.v" type="file.verilog" enable="1"/>

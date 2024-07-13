@@ -25,7 +25,7 @@
     "SubInsts" : [
      {
       "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
-      "InstLine" : 177,
+      "InstLine" : 226,
       "InstName" : "score1",
       "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/number_bitmap.v",
       "ModuleLine" : 1,
@@ -33,11 +33,27 @@
      },
      {
       "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
-      "InstLine" : 183,
+      "InstLine" : 232,
       "InstName" : "score2",
       "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/number_bitmap.v",
       "ModuleLine" : 1,
       "ModuleName" : "number_bitmap"
+     },
+     {
+      "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
+      "InstLine" : 238,
+      "InstName" : "level_bitmap",
+      "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/number_bitmap.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "number_bitmap"
+     },
+     {
+      "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
+      "InstLine" : 268,
+      "InstName" : "game_over_bmp",
+      "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/char_bitmap.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "game_over_bitmap"
      }
     ]
    },

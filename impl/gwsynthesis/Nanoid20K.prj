@@ -10,6 +10,7 @@
         <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v" type="verilog"/>
         <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\gowin_rpll\gowin_rpll.v" type="verilog"/>
         <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\number_bitmap.v" type="verilog"/>
+        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\char_bitmap.v" type="verilog"/>
         <File path="C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>
         <File path="C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v" type="gao"/>
         <File path="C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v" type="gao"/>
