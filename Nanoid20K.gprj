@@ -10,6 +10,7 @@
         <File path="src/game_loop.v" type="file.verilog" enable="1"/>
         <File path="src/game_top.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
+        <File path="src/number_bitmap.v" type="file.verilog" enable="1"/>
         <File path="src/game.cst" type="file.cst" enable="1"/>
         <File path="src/game.rao" type="file.gao" enable="1"/>
     </FileList>

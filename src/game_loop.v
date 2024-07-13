@@ -33,7 +33,7 @@ localparam MARGIN_TOP = 30; // Space from the top of the screen
 localparam MARGIN_SIDE = 40; // Space from the sides of the screen
 
 localparam NUM_BRICKS_X = 6;
-localparam NUM_BRICKS_Y = 3;
+localparam NUM_BRICKS_Y = 4;
 localparam NUM_BRICKS = NUM_BRICKS_X * NUM_BRICKS_Y;
 
 // State of bricks (1 = active, 0 = destroyed)
@@ -43,6 +43,7 @@ reg [CORDW-1:0] qx, qy;  // paddle position
 reg [CORDW-1:0] qxb, qyb;  // ball position
 reg qdx, qdy;  // ball direction: 0 is right/down
 reg [CORDW-1:0] qs = 5;   // ball speed in pixels/frame
+reg [CORDW-1:0] ps = 10;   // paddle speed in pixels/frame
 
 integer i, j;
 
@@ -65,10 +66,10 @@ end
 always @(posedge clk) begin
     if (frame && cnt_frame == 0) begin
         // horizontal position
-        if (btn2 && !(qx + H_SIZE_PADDLE + qs >= H_RES-1) ) begin  // moving right
-            qx <= qx + qs;  // continue moving right
-        end else if (btn1 && !(qx < qs)) begin
-            qx <= qx - qs;  // continue moving left
+        if (btn2 && !(qx + H_SIZE_PADDLE + ps >= H_RES-1) ) begin  // moving right
+            qx <= qx + ps;  // continue moving right
+        end else if (btn1 && !(qx < ps)) begin
+            qx <= qx - ps;  // continue moving left
         end
     end
 end
@@ -130,6 +131,8 @@ always @(posedge clk) begin
                 if ((qxb + H_SIZE_BALL > bx_min) && (qxb < bx_max) &&
                     (qyb + V_SIZE_BALL > by_min) && (qyb < by_max)) begin
                     score_counter = score_counter + 1;  // increase score on collision
+                    tens_digit = (score_counter - 1)  / 10;
+                    units_digit = score_counter  % 10;
                     bricks_active[i] = 0;
                     qdy <= ~qdy;
                 end
@@ -168,237 +171,20 @@ end
 
 // Score display in top left corner
 reg [7:0] score [7:0]; // 8x8 bitmaps for digits '0' to '9'
-always @ (posedge clk) begin
-    case (score_counter  % 10 - 1)
-        4'b0000: begin
-            score[0] = 8'b00111100;
-            score[1] = 8'b01100110;
-            score[2] = 8'b01100110;
-            score[3] = 8'b01100110;
-            score[4] = 8'b01100110;
-            score[5] = 8'b01100110;
-            score[6] = 8'b00111100;
-            score[7] = 8'b00000000;
-        end
-        4'b0001: begin
-            score[0] = 8'b00011000;
-            score[1] = 8'b00111000;
-            score[2] = 8'b00011000;
-            score[3] = 8'b00011000;
-            score[4] = 8'b00011000;
-            score[5] = 8'b00011000;
-            score[6] = 8'b01111110;
-            score[7] = 8'b00000000;
-        end
-        4'b0010: begin
-            score[0] = 8'b00111100;
-            score[1] = 8'b01100110;
-            score[2] = 8'b00000110;
-            score[3] = 8'b00001100;
-            score[4] = 8'b00110000;
-            score[5] = 8'b01100000;
-            score[6] = 8'b01111110;
-            score[7] = 8'b00000000;
-        end
-        4'b0011: begin
-            score[0] = 8'b00111100;
-            score[1] = 8'b01100110;
-            score[2] = 8'b00000110;
-            score[3] = 8'b00011100;
-            score[4] = 8'b00000110;
-            score[5] = 8'b01100110;
-            score[6] = 8'b00111100;
-            score[7] = 8'b00000000;
-        end
-        4'b0100: begin
-            score[0] = 8'b00001100;
-            score[1] = 8'b00011100;
-            score[2] = 8'b00111100;
-            score[3] = 8'b01101100;
-            score[4] = 8'b01111110;
-            score[5] = 8'b00001100;
-            score[6] = 8'b00011110;
-            score[7] = 8'b00000000;
-        end
-        4'b0101: begin
-            score[0] = 8'b01111110;
-            score[1] = 8'b01100000;
-            score[2] = 8'b01111100;
-            score[3] = 8'b00000110;
-            score[4] = 8'b00000110;
-            score[5] = 8'b01100110;
-            score[6] = 8'b00111100;
-            score[7] = 8'b00000000;
-        end
-        4'b0110: begin
-            score[0] = 8'b00111100;
-            score[1] = 8'b01100110;
-            score[2] = 8'b01100000;
-            score[3] = 8'b01111100;
-            score[4] = 8'b01100110;
-            score[5] = 8'b01100110;
-            score[6] = 8'b00111100;
-            score[7] = 8'b00000000;
-        end
-        4'b0111: begin
-            score[0] = 8'b01111110;
-            score[1] = 8'b01100110;
-            score[2] = 8'b00000110;
-            score[3] = 8'b00001100;
-            score[4] = 8'b00011000;
-            score[5] = 8'b00011000;
-            score[6] = 8'b00011000;
-            score[7] = 8'b00000000;
-        end
-        4'b1000: begin
-            score[0] = 8'b00111100;
-            score[1] = 8'b01100110;
-            score[2] = 8'b01100110;
-            score[3] = 8'b00111100;
-            score[4] = 8'b01100110;
-            score[5] = 8'b01100110;
-            score[6] = 8'b00111100;
-            score[7] = 8'b00000000;
-        end
-        4'b1001: begin
-            score[0] = 8'b00111100;
-            score[1] = 8'b01100110;
-            score[2] = 8'b01100110;
-            score[3] = 8'b00111110;
-            score[4] = 8'b00000110;
-            score[5] = 8'b01100110;
-            score[6] = 8'b00111100;
-            score[7] = 8'b00000000;
-        end
-        default: begin
-            score[0] = 8'b00000000;
-            score[1] = 8'b00000000;
-            score[2] = 8'b00000000;
-            score[3] = 8'b00000000;
-            score[4] = 8'b00000000;
-            score[5] = 8'b00000000;
-            score[6] = 8'b00000000;
-            score[7] = 8'b00000000;
-        end
-    endcase
-end
-
 reg [7:0] score_1 [7:0]; // 8x8 bitmaps for digits '0' to '9'
-always @ (posedge clk) begin
-    case (score_counter  / 10)
-        4'b0000: begin
-            score_1[0] = 8'b00111100;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b01100110;
-            score_1[3] = 8'b01100110;
-            score_1[4] = 8'b01100110;
-            score_1[5] = 8'b01100110;
-            score_1[6] = 8'b00111100;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0001: begin
-            score_1[0] = 8'b00011000;
-            score_1[1] = 8'b00111000;
-            score_1[2] = 8'b00011000;
-            score_1[3] = 8'b00011000;
-            score_1[4] = 8'b00011000;
-            score_1[5] = 8'b00011000;
-            score_1[6] = 8'b01111110;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0010: begin
-            score_1[0] = 8'b00111100;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b00000110;
-            score_1[3] = 8'b00001100;
-            score_1[4] = 8'b00110000;
-            score_1[5] = 8'b01100000;
-            score_1[6] = 8'b01111110;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0011: begin
-            score_1[0] = 8'b00111100;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b00000110;
-            score_1[3] = 8'b00011100;
-            score_1[4] = 8'b00000110;
-            score_1[5] = 8'b01100110;
-            score_1[6] = 8'b00111100;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0100: begin
-            score_1[0] = 8'b00001100;
-            score_1[1] = 8'b00011100;
-            score_1[2] = 8'b00111100;
-            score_1[3] = 8'b01101100;
-            score_1[4] = 8'b01111110;
-            score_1[5] = 8'b00001100;
-            score_1[6] = 8'b00011110;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0101: begin
-            score_1[0] = 8'b01111110;
-            score_1[1] = 8'b01100000;
-            score_1[2] = 8'b01111100;
-            score_1[3] = 8'b00000110;
-            score_1[4] = 8'b00000110;
-            score_1[5] = 8'b01100110;
-            score_1[6] = 8'b00111100;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0110: begin
-            score_1[0] = 8'b00111100;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b01100000;
-            score_1[3] = 8'b01111100;
-            score_1[4] = 8'b01100110;
-            score_1[5] = 8'b01100110;
-            score_1[6] = 8'b00111100;
-            score_1[7] = 8'b00000000;
-        end
-        4'b0111: begin
-            score_1[0] = 8'b01111110;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b00000110;
-            score_1[3] = 8'b00001100;
-            score_1[4] = 8'b00011000;
-            score_1[5] = 8'b00011000;
-            score_1[6] = 8'b00011000;
-            score_1[7] = 8'b00000000;
-        end
-        4'b1000: begin
-            score_1[0] = 8'b00111100;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b01100110;
-            score_1[3] = 8'b00111100;
-            score_1[4] = 8'b01100110;
-            score_1[5] = 8'b01100110;
-            score_1[6] = 8'b00111100;
-            score_1[7] = 8'b00000000;
-        end
-        4'b1001: begin
-            score_1[0] = 8'b00111100;
-            score_1[1] = 8'b01100110;
-            score_1[2] = 8'b01100110;
-            score_1[3] = 8'b00111110;
-            score_1[4] = 8'b00000110;
-            score_1[5] = 8'b01100110;
-            score_1[6] = 8'b00111100;
-            score_1[7] = 8'b00000000;
-        end
-        default: begin
-            score_1[0] = 8'b00000000;
-            score_1[1] = 8'b00000000;
-            score_1[2] = 8'b00000000;
-            score_1[3] = 8'b00000000;
-            score_1[4] = 8'b00000000;
-            score_1[5] = 8'b00000000;
-            score_1[6] = 8'b00000000;
-            score_1[7] = 8'b00000000;
-        end
-    endcase
-end
 
+
+number_bitmap score1 ( //tens
+    .clk(clk),
+    .number(tens_digit),
+    .score(score_1)
+);
+
+number_bitmap score2 ( //units
+    .clk(clk),
+    .number((units_digit - 1) < 9 ? (units_digit - 1) : 9 ),
+    .score(score)
+);
 
 reg score_area_1;
 always @(posedge clk) begin

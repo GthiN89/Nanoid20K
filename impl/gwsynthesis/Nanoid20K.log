@@ -1,23 +1,24 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\display480p.v'
-Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\gowin_rpll\gowin_rpll.v'
 Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v'
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v'
+WARN  (EX2987) : Variable 'bx_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":126)
+WARN  (EX2987) : Variable 'bx_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":127)
+WARN  (EX2987) : Variable 'by_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":128)
+WARN  (EX2987) : Variable 'by_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":129)
+WARN  (EX2987) : Variable 'bx_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":160)
+WARN  (EX2987) : Variable 'bx_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":161)
+WARN  (EX2987) : Variable 'by_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":162)
+WARN  (EX2987) : Variable 'by_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":163)
+WARN  (EX2987) : Variable 'scaled_sx' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":191)
+WARN  (EX2987) : Variable 'scaled_sy' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":192)
+WARN  (EX2987) : Variable 'scaled_sx' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":198)
+WARN  (EX2987) : Variable 'scaled_sy' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":199)
 Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v'
 Undeclared symbol 'PLL_CLKFX', assumed default net type 'wire'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":63)
-Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v'
-WARN  (EX2987) : Variable 'bx_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":125)
-WARN  (EX2987) : Variable 'bx_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":126)
-WARN  (EX2987) : Variable 'by_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":127)
-WARN  (EX2987) : Variable 'by_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":128)
-WARN  (EX2987) : Variable 'bx_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":157)
-WARN  (EX2987) : Variable 'bx_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":158)
-WARN  (EX2987) : Variable 'by_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":159)
-WARN  (EX2987) : Variable 'by_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":160)
-WARN  (EX2987) : Variable 'scaled_sx' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":405)
-WARN  (EX2987) : Variable 'scaled_sy' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":406)
-WARN  (EX2987) : Variable 'scaled_sx' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":412)
-WARN  (EX2987) : Variable 'scaled_sy' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":413)
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\gowin_rpll\gowin_rpll.v'
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\number_bitmap.v'
 Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v'
 Analyzing included file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\gwsynthesis\RTL_GAO\ao_0\gw_ao_top_define.v'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":133)
 Back to file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":133)
@@ -44,9 +45,15 @@ WARN  (EX3670) : Actual bit length 10 differs from formal bit length 16 for port
 WARN  (EX3670) : Actual bit length 10 differs from formal bit length 16 for port 'sy'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":28)
 Compiling module 'game_loop'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":1)
 WARN  (EX3780) : Using initial value of 'qs' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":45)
-WARN  (EX3780) : Using initial value of 'qy' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":62)
+WARN  (EX3780) : Using initial value of 'ps' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":46)
+WARN  (EX3780) : Using initial value of 'qy' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":63)
 WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":20)
-WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":132)
+WARN  (EX3791) : Expression size 9 truncated to fit in target size 8("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":133)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 4("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":134)
+Compiling module 'number_bitmap'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\number_bitmap.v":1)
+WARN  (EX3670) : Actual bit length 4 differs from formal bit length 8 for port 'number'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":179)
+WARN  (EX3670) : Actual bit length 32 differs from formal bit length 8 for port 'number'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":185)
+WARN  (EX1998) : Net 'qx[0]' does not have a driver("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":42)
 Compiling module 'DVI_TX_Top'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":1044)
 Compiling module '**'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":0)
 Compiling module '**'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":0)

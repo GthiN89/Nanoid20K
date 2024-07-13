@@ -6,11 +6,11 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/gowin_rpll/gowin_rpll.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/dvi_tx/dvi_tx.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/dvi_tx/dvi_tx.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
    "Type" : "verilog"
   },
   {
@@ -18,7 +18,11 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/gowin_rpll/gowin_rpll.v",
+   "Type" : "verilog"
+  },
+  {
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/number_bitmap.v",
    "Type" : "verilog"
   }
  ],
