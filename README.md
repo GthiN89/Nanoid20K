@@ -4,9 +4,8 @@ Using GoWin DVI IP.</br>
 Added score counter.</br>
 Added levels.</br>
 Added state mashine.</br></br>
-
-<ul>
 TODO:
+<ul>
 <li>DualShock 2 support</li>
 </ul>
 </br>
