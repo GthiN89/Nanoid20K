@@ -6,4 +6,6 @@ Added levels.
 Added state mashine.
 TODO:
 DualShock 2 support
+</br>
+</br>
 <img src='https://github.com/GthiN89/Nanoid20K/blob/main/img/Pictures/Capture.PNG?raw=true' width=60%>
