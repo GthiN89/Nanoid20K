@@ -4,11 +4,11 @@
     <Version>beta</Version>
     <Device id="GW2AR-18C" package="QFN88PF" speed="9" partNumber="GW2AR-LV18QN88PFC9/I8"/>
     <FileList>
-        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\HDMI.v" type="verilog"/>
+        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\display480p.v" type="verilog"/>
         <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\gowin_rpll\gowin_rpll.v" type="verilog"/>
-        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\pattern.v" type="verilog"/>
-        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\simple480p.v" type="verilog"/>
-        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\tmds_encoder.v" type="verilog"/>
+        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v" type="verilog"/>
+        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v" type="verilog"/>
+        <File path="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v" type="verilog"/>
         <File path="C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v" type="gao"/>
         <File path="C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_top.v" type="gao"/>
         <File path="C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v" type="gao"/>
@@ -23,7 +23,7 @@
         <Option type="output_file" value="C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\gwsynthesis\Nanoid20K.vg"/>
         <Option type="print_all_synthesis_warning" value="0"/>
         <Option type="ram_rw_check" value="0"/>
-        <Option type="top_module" value="HDMI_top"/>
+        <Option type="top_module" value="game_top"/>
         <Option type="verilog_language" value="sysv-2017"/>
         <Option type="vhdl_language" value="vhdl-1993"/>
     </OptionList>

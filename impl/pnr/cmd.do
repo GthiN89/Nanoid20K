@@ -1,7 +1,7 @@
 -d C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\gwsynthesis\Nanoid20K.vg
 -p GW2AR-18C-QFN88PF-9
 -pn GW2AR-LV18QN88PFC9/I8
--cst C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\hdmi123.cst
+-cst C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game.cst
 -cfg C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\pnr\device.cfg
 -gao_crc 0101100011000111
 -bit

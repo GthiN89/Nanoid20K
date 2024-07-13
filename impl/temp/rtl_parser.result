@@ -1,55 +1,49 @@
 [
  {
-  "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-  "InstLine" : 4,
-  "InstName" : "HDMI_top",
-  "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-  "ModuleLine" : 4,
-  "ModuleName" : "HDMI_top",
+  "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
+  "InstLine" : 2,
+  "InstName" : "game_top",
+  "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
+  "ModuleLine" : 2,
+  "ModuleName" : "game_top",
   "SubInsts" : [
    {
-    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-    "InstLine" : 26,
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
+    "InstLine" : 24,
     "InstName" : "s480p",
-    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/simple480p.v",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/display480p.v",
     "ModuleLine" : 1,
-    "ModuleName" : "simple480p"
+    "ModuleName" : "display_480p"
    },
    {
-    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-    "InstLine" : 59,
-    "InstName" : "animation",
-    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/pattern.v",
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
+    "InstLine" : 46,
+    "InstName" : "arkanoid",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
     "ModuleLine" : 1,
-    "ModuleName" : "pattern"
+    "ModuleName" : "game_loop"
    },
    {
-    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-    "InstLine" : 74,
-    "InstName" : "encode_R",
-    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
-    "ModuleLine" : 2,
-    "ModuleName" : "TMDS_encoder"
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
+    "InstLine" : 60,
+    "InstName" : "DVI_TX_Top_inst",
+    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/dvi_tx/dvi_tx.v",
+    "ModuleLine" : 1044,
+    "ModuleName" : "DVI_TX_Top",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/dvi_tx/dvi_tx.v",
+      "InstLine" : 1075,
+      "InstName" : "rgb2dvi_inst",
+      "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/dvi_tx/dvi_tx.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~rgb2dvi.DVI_TX_Top"
+     }
+    ]
    },
    {
-    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-    "InstLine" : 75,
-    "InstName" : "encode_G",
-    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
-    "ModuleLine" : 2,
-    "ModuleName" : "TMDS_encoder"
-   },
-   {
-    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-    "InstLine" : 76,
-    "InstName" : "encode_B",
-    "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
-    "ModuleLine" : 2,
-    "ModuleName" : "TMDS_encoder"
-   },
-   {
-    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
-    "InstLine" : 82,
+    "InstFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
+    "InstLine" : 80,
     "InstName" : "rPLL",
     "ModuleFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/gowin_rpll/gowin_rpll.v",
     "ModuleLine" : 10,

@@ -5,12 +5,12 @@
     <Version>5</Version>
     <Device name="GW2AR-18C" pn="GW2AR-LV18QN88PFC9/I8">gw2ar18c-016</Device>
     <FileList>
-        <File path="src/HDMI.v" type="file.verilog" enable="1"/>
+        <File path="src/display480p.v" type="file.verilog" enable="1"/>
+        <File path="src/dvi_tx/dvi_tx.v" type="file.verilog" enable="1"/>
+        <File path="src/game_loop.v" type="file.verilog" enable="1"/>
+        <File path="src/game_top.v" type="file.verilog" enable="1"/>
         <File path="src/gowin_rpll/gowin_rpll.v" type="file.verilog" enable="1"/>
-        <File path="src/pattern.v" type="file.verilog" enable="1"/>
-        <File path="src/simple480p.v" type="file.verilog" enable="1"/>
-        <File path="src/tmds_encoder.v" type="file.verilog" enable="1"/>
-        <File path="src/hdmi123.cst" type="file.cst" enable="1"/>
-        <File path="src/hdmi123.rao" type="file.gao" enable="1"/>
+        <File path="src/game.cst" type="file.cst" enable="1"/>
+        <File path="src/game.rao" type="file.gao" enable="1"/>
     </FileList>
 </Project>

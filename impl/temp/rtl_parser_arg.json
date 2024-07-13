@@ -2,7 +2,7 @@
  "Device" : "GW2AR-18C",
  "Files" : [
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/HDMI.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/display480p.v",
    "Type" : "verilog"
   },
   {
@@ -10,15 +10,15 @@
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/pattern.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/dvi_tx/dvi_tx.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/simple480p.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_top.v",
    "Type" : "verilog"
   },
   {
-   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/tmds_encoder.v",
+   "Path" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/src/game_loop.v",
    "Type" : "verilog"
   }
  ],
@@ -27,7 +27,7 @@
  ],
  "LoopLimit" : 2000,
  "ResultFile" : "C:/Users/Petr/Documents/FPGA/Graphic 2/framebuffer/1/Nanoid20K/impl/temp/rtl_parser.result",
- "Top" : "HDMI",
+ "Top" : "game_top",
  "VerilogStd" : "sysv",
  "VhdlStd" : "vhdl_93"
 }

@@ -1,10 +1,19 @@
 GowinSynthesis start
 Running parser ...
-Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\HDMI.v'
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\display480p.v'
 Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\gowin_rpll\gowin_rpll.v'
-Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\pattern.v'
-Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\simple480p.v'
-Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\tmds_encoder.v'
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v'
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v'
+Undeclared symbol 'PLL_CLKFX', assumed default net type 'wire'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":63)
+Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v'
+WARN  (EX2987) : Variable 'bx_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":118)
+WARN  (EX2987) : Variable 'bx_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":119)
+WARN  (EX2987) : Variable 'by_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":120)
+WARN  (EX2987) : Variable 'by_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":121)
+WARN  (EX2987) : Variable 'bx_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":149)
+WARN  (EX2987) : Variable 'bx_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":150)
+WARN  (EX2987) : Variable 'by_min' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":151)
+WARN  (EX2987) : Variable 'by_max' must explicitly be declared as automatic or static("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":152)
 Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v'
 Analyzing included file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\gwsynthesis\RTL_GAO\ao_0\gw_ao_top_define.v'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":133)
 Back to file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":133)
@@ -22,18 +31,23 @@ Analyzing included file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_
 Back to file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":367)
 Analyzing Verilog file 'C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\gw_jtag.v'
 Analyzing Verilog file 'C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\gwsynthesis\RTL_GAO\gw_gao_top.v'
-WARN  (EX3073) : Port 'rst_pix' remains unconnected for this instance("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\HDMI.v":34)
-Compiling module 'HDMI_top'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\HDMI.v":4)
-Compiling module 'simple480p'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\simple480p.v":1)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\simple480p.v":35)
-WARN  (EX3791) : Expression size 11 truncated to fit in target size 10("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\simple480p.v":37)
-Compiling module 'pattern'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\pattern.v":1)
-WARN  (EX3780) : Using initial value of 'qs' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\pattern.v":130)
-WARN  (EX3780) : Using initial value of 'qy' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\pattern.v":156)
-WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\pattern.v":16)
-Compiling module 'TMDS_encoder'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\tmds_encoder.v":2)
+Compiling module 'game_top'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":2)
+WARN  (EX3780) : Using initial value of 'rst_pix' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":22)
+Compiling module 'display_480p'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\display480p.v":1)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\display480p.v":67)
+WARN  (EX3791) : Expression size 32 truncated to fit in target size 16("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\display480p.v":69)
+WARN  (EX3670) : Actual bit length 10 differs from formal bit length 16 for port 'sx'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":27)
+WARN  (EX3670) : Actual bit length 10 differs from formal bit length 16 for port 'sy'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_top.v":28)
+Compiling module 'game_loop'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":1)
+WARN  (EX3780) : Using initial value of 'qs' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":41)
+WARN  (EX3780) : Using initial value of 'qy' since it is never assigned("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":55)
+WARN  (EX3791) : Expression size 2 truncated to fit in target size 1("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\game_loop.v":16)
+Compiling module 'DVI_TX_Top'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":1044)
+Compiling module '**'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":0)
+Compiling module '**'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":0)
+Compiling module '**'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":0)
+Compiling module '**'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\dvi_tx\dvi_tx.v":0)
 Compiling module 'Gowin_rPLL'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\gowin_rpll\gowin_rpll.v":10)
-WARN  (EX2565) : Input 'rst_pix' on this instance is undriven. Assigning to 0, simulation mismatch possible. Please assign the input or remove the declaration("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\src\HDMI.v":34)
 Compiling module 'gw_gao'("C:\Users\Petr\Documents\FPGA\Graphic 2\framebuffer\1\Nanoid20K\impl\gwsynthesis\RTL_GAO\gw_gao_top.v":1)
 Compiling module 'GW_JTAG'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\gw_jtag.v":1)
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_CON\gw_con_top.v":0)
@@ -42,7 +56,7 @@ WARN  (EX3791) : Expression size ** truncated to fit in target size **("C:\Gowin
 Compiling module '**'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":0)
 Extracting RAM for identifier '**'("C:\Gowin\Gowin_V1.9.9_x64\IDE\data\ipcores\GAO_LITE\GW_AO_0\gw_ao_mem_ctrl.v":0)
 Trying to combine GAO to RTL design
-NOTE  (EX0101) : Current top module is "HDMI_top"
+NOTE  (EX0101) : Current top module is "game_top"
 [5%] Running netlist conversion ...
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
