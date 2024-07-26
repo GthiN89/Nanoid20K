@@ -1,7 +1,7 @@
 module number_bitmap (
  input clk,
- input reg [7:0] number,
- output reg [7:0] score [7:0]
+ input  [7:0] number,
+ output  [7:0] score,
 );
 
 
