@@ -1,5 +1,5 @@
 *.v linguist-language=Verilog
-*.glsl linguist-detectable=false
-*.vert linguist-detectable=false
-*.frag linguist-detectable=false
-*.geom linguist-detectable=false
+*.glsl linguist-language=Verilog
+*.vert linguist-language=Verilog
+*.frag  linguist-language=Verilog
+*.geom  linguist-language=Verilog
